@@ -1,0 +1,3 @@
+# Source workbooks may contain restricted verification data
+*.xlsx
+~$*
