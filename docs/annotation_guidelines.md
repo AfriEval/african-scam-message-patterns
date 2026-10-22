@@ -13,21 +13,26 @@
 | RULE-007 | Language | Do not automatically infer code-mixing/switching from two language tags; request language review. |
 | RULE-008 | Duplicates | Review exact duplicate texts; preserve provenance and do not count duplicates as independent incidents. |
 | RULE-009 | Public release | All real-world records remain restricted until rights, consent/lawful basis and privacy reviews pass. |
+| RULE-010 | Taxonomy | Assign a subtype only when the message evidence supports it; do not infer confirmed fraud from wording alone. |
 
 ## Assigning a subtype
 
 1. Read the full message and identify the core request.
-2. Pick the single best-fitting subtype in `taxonomy/scam_taxonomy.csv` using its `working_definition`. Assign a subtype only when the message evidence supports it; do not infer confirmed fraud from wording alone.
-3. Copy `category`, `scam_type` and `subtype` exactly from the taxonomy row.
+2. Pick the single best-fitting subtype in `taxonomy/scam_taxonomy.csv` using its `working_definition` (RULE-010).
+3. Enter only `taxonomy_id`; `category`, `scam_type` and `subtype` are filled from the taxonomy.
 4. Use `TAX-012` (Uncontextualized payment instruction) only as a last resort. A high usage rate signals a missing subtype.
 
 ## Tactics, identity and action
 
-- Tag every tactic present, using the `tactic` values in `taxonomy/tactics.csv`, separated by `; `.
+- Tag every tactic present, using the `tactic` codes in `taxonomy/tactics.csv` (e.g. `urgency_pressure`), as a JSON array: `["authority_claim", "urgency_pressure"]`. The same format applies to `requested_action`, `risk_indicators` and `language_tags`.
+- Use the standard placeholders when redacting: `[PHONE]`, `[LINK]`, `[PAYBILL]`, `[ACCOUNT]`, `[AMOUNT]`, `[ORGANIZATION]`, `[NAME]`, `[CODE]`.
+- Never correct spelling or grammar in `message_text_redacted`; errors in scam messages are signals.
 - `claimed_identity` is who the sender says they are, not who they actually are.
 - `requested_action` is what the recipient is asked to do, e.g. `Open link`, `Pay fee`.
 
 ## Open taxonomy questions
+
+These are tracked with a status in the workbook's Taxonomy Review sheet.
 
 | Rows | Note |
 |---|---|
@@ -39,4 +44,3 @@
 | TAX-007 | Task-based scams sit under Employment fraud; some taxonomies treat them as investment fraud. |
 | TAX-026 | Utility disconnection sits under Housing fraud; could fit Government impersonation or a utility category. |
 | TAX-012 | Strict fallback; track usage rate. |
-| `annotation_rule` column | Identical on every taxonomy row; could be removed in favour of these guidelines. |
