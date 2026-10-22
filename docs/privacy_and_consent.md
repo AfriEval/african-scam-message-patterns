@@ -6,8 +6,9 @@ Before any record enters the dataset, remove or replace:
 
 - phone numbers → `[PHONE]`
 - live URLs → `[LINK]`
-- bank, paybill and till numbers → `[Account Number]`, `[Paybill Number]`
-- names of private individuals, schools, estates or businesses that could identify the contributor
+- bank, paybill and till numbers → `[PAYBILL]`, `[ACCOUNT]`
+- names of private individuals → `[NAME]`; schools, estates or businesses that could identify the contributor → `[ORGANIZATION]`
+- passwords, PINs and verification codes → `[CODE]`
 - national ID, KRA PIN or similar identifiers
 
 Also review indirect identifiers: a combination of location, institution and date can identify a contributor even after direct identifiers are removed (RULE-005).
