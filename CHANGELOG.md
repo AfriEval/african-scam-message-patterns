@@ -2,6 +2,22 @@
 
 All notable changes to this dataset are documented here.
 
+## [Unreleased]
+
+### Changed
+- Standardised placeholders to `[PHONE]`, `[LINK]`, `[PAYBILL]`, `[ACCOUNT]`, `[AMOUNT]`, `[ORGANIZATION]`, `[NAME]`, `[CODE]`.
+- `tactics` now use the codes in `taxonomy/tactics.csv`; `requested_action` uses a fixed list; `risk_indicators` are `; `-separated with typos fixed.
+- Cleared `language_tags` on all records for fresh labelling.
+- Redacted personal names in REAL-0005 and REAL-0006 and a password in REAL-0006.
+- REAL-0006 `fraud_status` changed to `suspected_fraud`; the reported check supports suspicion, not verification.
+- REAL-0004 reassigned from TAX-003 to TAX-008 (payment requested after a job offer).
+- REAL-0007: removed `sympathy_appeal` tactic, which the text does not support.
+- SYN-0017 rewritten; it was an exact duplicate of SYN-0002.
+- REAL-0009 flagged as a possible duplicate of REAL-0003.
+- Records sorted: synthetic first, then real-world.
+- Removed the `annotation_rule` column from the taxonomy; it is now RULE-010.
+- Removed `observed_variants` from `tactics.csv`.
+
 ## [0.1.0] - 2026-10-22
 
 ### Added
@@ -12,6 +28,5 @@ All notable changes to this dataset are documented here.
 - Data dictionary, annotation guidelines, verification protocol and privacy policy.
 
 ### Known issues
-- `tactics` and `requested_action` values are not yet normalised to the controlled vocabularies (mixed casing, `;_` separators, typos such as `shortend_url`).
-- `language_tags` is missing for 19 records.
+- `language_tags` is empty pending labelling.
 - Open taxonomy questions are listed in `docs/annotation_guidelines.md`.
