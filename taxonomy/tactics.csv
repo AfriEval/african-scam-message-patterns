@@ -1,0 +1,22 @@
+tactic_id,tactic,label,definition,observed_variants
+TAC-001,authority_claim,Authority claim,"The sender presents as an institution or person with power over the recipient (bank, employer, school, government office, landlord) to make the request seem legitimate.",Authority claim
+TAC-002,urgency_pressure,Urgency pressure,"The message imposes a deadline or immediate consequence so the recipient acts before checking.",Urgency pressure
+TAC-003,fear,Fear,"The message threatens a loss or penalty, such as account suspension, disconnection, a fine or a child being sent home.",fear
+TAC-004,sympathy_appeal,Sympathy appeal,"The sender invokes hardship, an emergency or a personal mistake to elicit help.",sympathy appeal
+TAC-005,reward_bait,Reward bait,"The message offers a prize, bonus, airtime, points or another unearned benefit.",reward_bait
+TAC-006,opportunity_bait,Opportunity bait,"The message offers a job, placement, scholarship or similar opportunity the recipient did not seek.",opportunity_bait
+TAC-007,income_promise,Income promise,"The message promises easy or guaranteed earnings, typically for little effort.",income_promise
+TAC-008,high_return_promise,High-return promise,"The message promises investment returns well above normal market rates or guaranteed returns.",high-return_promise
+TAC-009,advance_fee,Advance fee,"The recipient must pay a fee, deposit or charge before receiving a promised benefit.",advance_fee
+TAC-010,payment_redirection,Payment redirection,"The message asks the recipient to send an expected payment to a new or different account, number or paybill.",payment_redirection
+TAC-011,reversal_pretext,Reversal pretext,"The sender claims a transaction went wrong and asks for funds to be returned or resent.",reversal_pretext
+TAC-012,exclusivity,Exclusivity,"The recipient is told they were specially selected or that payment must go only through a stated channel.",exclusivity
+TAC-013,scarcity,Scarcity,"The message claims limited slots, stock or availability to force a quick decision.",scarcity
+TAC-014,social_proof,Social proof,"The message cites other people's participation or success to build credibility.",social_proof
+TAC-015,familiarity,Familiarity,"The sender poses as someone the recipient already knows, such as a friend, relative or contact on a new number.",familiarity
+TAC-016,trust_exploitation,Trust exploitation,"The message abuses an existing trusted relationship or channel, such as a known contact's real account.",trust_exploitation
+TAC-017,trust_appeal,Trust appeal,"The message uses reassurance or trust signals (official-sounding language, guarantees) to lower suspicion.",trust_appeal
+TAC-018,curiosity,Curiosity,"The message withholds information (results, a parcel, a message) to prompt the recipient to click or respond.",curiosity
+TAC-019,suspicious_link,Suspicious link,"The message contains a link with a lookalike domain, odd characters or no clear relation to the claimed sender.",suspicious_link
+TAC-020,shortened_url,Shortened URL,"The message uses a URL shortener that hides the true destination.",shortened_url; shortend_url
+TAC-021,compromised_account,Compromised account,"The message is sent from a genuine account (e.g. WhatsApp) that has been taken over by the scammer.",compromised_whatsapp_account
