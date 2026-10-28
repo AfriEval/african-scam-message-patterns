@@ -25,7 +25,7 @@
 ## Tactics, identity and action
 
 - Tag every tactic present, using the `tactic` codes in `taxonomy/tactics.csv` (e.g. `urgency_pressure`), as a JSON array: `["authority_claim", "urgency_pressure"]`. The same format applies to `requested_action`, `risk_indicators` and `language_tags`.
-- Use the standard placeholders when redacting: `[PHONE]`, `[LINK]`, `[PAYBILL]`, `[ACCOUNT]`, `[AMOUNT]`, `[ORGANIZATION]`, `[NAME]`, `[CODE]`.
+- Use the standard placeholders when redacting: `[PHONE]`, `[LINK]`, `[EMAIL]`, `[PAYBILL]`, `[ACCOUNT]`, `[AMOUNT]`, `[ORGANIZATION]`, `[NAME]`, `[ADDRESS]`, `[CODE]`.
 - Never correct spelling or grammar in `message_text_redacted`; errors in scam messages are signals.
 - `claimed_identity` is who the sender says they are, not who they actually are.
 - `requested_action` is what the recipient is asked to do, e.g. `Open link`, `Pay fee`.

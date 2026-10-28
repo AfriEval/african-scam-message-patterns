@@ -5,10 +5,11 @@
 Before any record enters the dataset, remove or replace:
 
 - phone numbers → `[PHONE]`
-- live URLs → `[LINK]`
+- live URLs → `[LINK]`; email addresses → `[EMAIL]`
 - bank, paybill and till numbers → `[PAYBILL]`, `[ACCOUNT]`
 - names of private individuals → `[NAME]`; schools, estates or businesses that could identify the contributor → `[ORGANIZATION]`
-- passwords, PINs and verification codes → `[CODE]`
+- street addresses and venues → `[ADDRESS]`
+- passwords, PINs, verification codes and reference numbers that could identify the recipient → `[CODE]`
 - national ID, KRA PIN or similar identifiers
 
 Also review indirect identifiers: a combination of location, institution and date can identify a contributor even after direct identifiers are removed (RULE-005).

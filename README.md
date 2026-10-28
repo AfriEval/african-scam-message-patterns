@@ -6,11 +6,11 @@ A dataset of scam and fraud messages from African countries, labelled with a sha
 
 | Path | Description |
 |---|---|
-| `data/kenya/af-scam-ke-v0.1.csv` | Kenya observations: 60 records (50 synthetic, 10 real-world) |
-| `data/nigeria/af-scam-ng-screenshots-v0.1.xlsx` | Nigeria observations from public screenshots: 62 real-world records (pending review) |
-| `data/nigeria/af-scam-ng-contributor-R-F8JM-W6U-v0.1.xlsx` | Nigeria observations from a contributor: 10 real-world records (pending review) |
-| `taxonomy/scam_taxonomy.csv` | Category → scam type → subtype hierarchy (56 subtypes) with working definitions |
-| `taxonomy/tactics.csv` | Controlled vocabulary of 21 persuasion tactics |
+| `data/kenya/af-scam-ke-v0.1.csv` | Kenya observations: 60 records, 10 real-world first, then 50 synthetic |
+| `data/nigeria/af-scam-ng-screenshots-v0.1.csv` | Nigeria observations from public screenshots: 62 real-world records (pending review) |
+| `data/nigeria/af-scam-ng-contributor-R-F8JM-W6U-v0.1.csv` | Nigeria observations from a contributor: 9 real-world records (pending review) |
+| `taxonomy/scam_taxonomy.csv` | Category → scam type → subtype hierarchy (68 subtypes) with working definitions |
+| `taxonomy/tactics.csv` | Controlled vocabulary of 22 persuasion tactics |
 | `docs/data_dictionary.md` | Field definitions and allowed values |
 | `docs/annotation_guidelines.md` | Annotation rules and open taxonomy questions |
 | `docs/verification_protocol.md` | How fraud status is established and recorded |
@@ -28,7 +28,7 @@ Real-world records may have a `screenshot_file` pointing to the original screens
 - UTF-8 CSV, one row per message.
 - `tactics`, `requested_action`, `risk_indicators` and `language_tags` are JSON arrays, e.g. `["authority_claim", "urgency_pressure"]`. An empty cell means not yet labelled.
 - `language_tags` use ISO 639-1 codes (`en`, `sw`). Sheng has no ISO code and is tagged `sw`, with a note in `review_notes`.
-- Personal and financial details are replaced with placeholders: `[PHONE]`, `[LINK]`, `[PAYBILL]`, `[ACCOUNT]`, `[AMOUNT]`, `[ORGANIZATION]`, `[NAME]`, `[CODE]`.
+- Personal and financial details are replaced with placeholders: `[PHONE]`, `[LINK]`, `[EMAIL]`, `[PAYBILL]`, `[ACCOUNT]`, `[AMOUNT]`, `[ORGANIZATION]`, `[NAME]`, `[ADDRESS]`, `[CODE]`.
 - Spelling and grammar in message text are kept exactly as received, because errors are themselves scam signals.
 
 ## Quick start
@@ -49,7 +49,9 @@ print(real.explode("tactics").tactics.value_counts())
 
 Version 0.1 is a draft. All records are `pending_review`.
 
-- **Taxonomy:** 12 new subtypes (TAX-057 to TAX-068) are proposed from the Nigeria data, including BVN update phishing and fake bank credit alerts. They will be added once reviewed.
+- **Working files:** each CSV is exported from an Excel workbook used for annotation (`AF-SCAM-KE_Standardized_v0.1.xlsx` for Kenya, and the matching `.xlsx` next to each Nigeria CSV). The workbooks also hold verification events and review notes, and are not published.
+- **Nigeria duplicates:** one contributor record duplicated a screenshot record and was removed (ID `AF-SCAM-NG-REAL-0071` is retired), leaving 71 unique Nigeria records.
+- **Taxonomy:** 12 subtypes (TAX-057 to TAX-068) and one tactic (`religious_appeal`) were added from the Nigeria data, including BVN update phishing, fake bank credit alerts and fake password change alerts.
 
 See [CHANGELOG.md](CHANGELOG.md) for changes.
 
