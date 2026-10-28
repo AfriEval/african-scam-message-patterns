@@ -22,6 +22,7 @@ Applies to every country file in `data/` (e.g. `data/kenya/af-scam-ke-v0.1.csv`)
 | `verification_status` | enum | State of verification | `not_applicable` (synthetic), `completed_reported`, `not_documented` |
 | `review_status` | enum | Editorial review state | `pending_review`, `reviewed` |
 | `review_notes` | text | Reviewer comments | Free text |
+| `screenshot_file` | string | Source screenshot for a real-world record, if one exists | File name in the country's `screenshots/` folder. Screenshots are unredacted and are not published |
 
 ## Notes
 
