@@ -20,3 +20,4 @@ TAC-018,curiosity,Curiosity,"The message withholds information (results, a parce
 TAC-019,suspicious_link,Suspicious link,"The message contains a link with a lookalike domain, odd characters or no clear relation to the claimed sender."
 TAC-020,shortened_url,Shortened URL,The message uses a URL shortener that hides the true destination.
 TAC-021,compromised_account,Compromised account,The message is sent from a genuine account (e.g. WhatsApp) that has been taken over by the scammer.
+TAC-022,religious_appeal,Religious appeal,"The message invokes God, scripture, prayer or a church to build trust or apply moral pressure."
