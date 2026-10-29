@@ -5,8 +5,8 @@ All notable changes to this dataset are documented here.
 ## [Unreleased]
 
 ### Changed
-- Nigeria review pass: REAL-0023, 0029, 0034, 0048 and 0058 set to the new `not_scam` status and kept as negative examples; REAL-0026 set to `suspected_fraud`.
-- Removed REAL-0053 (Singapore) and REAL-0057 (Philippines) as out of scope; their IDs are retired.
+- Nigeria review pass: REAL-0023, 0029, 0034 and 0048 set to the new `not_scam` status and kept as negative examples; REAL-0026 set to `suspected_fraud`.
+- Removed eight records from outside Africa: REAL-0005 and 0058 (US), 0033, 0046 and 0047 (Australia), 0053 (Singapore), 0057 (Philippines) and 0060 (India). Their IDs are retired. TAX-058 and TAX-065 now have no records.
 - Standardised placeholders to `[PHONE]`, `[LINK]`, `[PAYBILL]`, `[ACCOUNT]`, `[AMOUNT]`, `[ORGANIZATION]`, `[NAME]`, `[CODE]`.
 - `tactics` now use the codes in `taxonomy/tactics.csv`; `requested_action` uses a fixed list; `risk_indicators` are `; `-separated with typos fixed.
 - Cleared `language_tags` on all records for fresh labelling.
