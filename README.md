@@ -20,7 +20,7 @@ A dataset of scam and fraud messages from African countries, labelled with a sha
 | Path | Description |
 |---|---|
 | `data/kenya/af-scam-ke-v0.1.csv` | Kenya observations: 60 records, 10 real-world first, then 50 synthetic |
-| `data/nigeria/af-scam-ng-screenshots-v0.1.csv` | Nigeria observations from public screenshots: 61 real-world records (pending review) |
+| `data/nigeria/af-scam-ng-screenshots-v0.1.csv` | Nigeria observations from public screenshots: 59 real-world records (pending review) |
 | `data/nigeria/af-scam-ng-contributor-R-F8JM-W6U-v0.1.csv` | Nigeria observations from a contributor: 10 real-world records (pending review) |
 | `taxonomy/scam_taxonomy.csv` | Category → scam type → subtype hierarchy (68 subtypes) with working definitions |
 | `taxonomy/tactics.csv` | Controlled vocabulary of 22 persuasion tactics |
@@ -75,6 +75,8 @@ Version 0.1 is a draft. All records are `pending_review`.
 
 - **Working files:** each CSV is exported from an Excel workbook used for annotation (`AF-SCAM-KE_Standardized_v0.1.xlsx` for Kenya, and the matching `.xlsx` next to each Nigeria CSV). The workbooks also hold verification events and review notes, and are not published.
 - **Nigeria duplicates:** one public screenshot record duplicated a contributor's firsthand submission (`AF-SCAM-NG-REAL-0071`). The contribution is kept and the screenshot copy removed; its ID `AF-SCAM-NG-REAL-0010` is retired.
+- **Out of scope:** two screenshot records from outside Africa (`AF-SCAM-NG-REAL-0053`, Singapore; `AF-SCAM-NG-REAL-0057`, Philippines) were removed and their IDs retired.
+- **Negative examples:** five screenshot records judged legitimate on review are kept with `fraud_status = not_scam` (`AF-SCAM-NG-REAL-0023`, `0029`, `0034`, `0048`, `0058`). Filter them out when you need scam messages only.
 - **Taxonomy:** 12 subtypes (TAX-057 to TAX-068) and one tactic (`religious_appeal`) were added from the Nigeria data, including BVN update phishing, fake bank credit alerts and fake password change alerts.
 
 See [CHANGELOG.md](CHANGELOG.md) for changes.

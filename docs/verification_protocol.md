@@ -40,5 +40,6 @@ Per RULE-004, owner or management confirmations are recorded as contributor-repo
 - `verified_fraudulent_request`: at least one completed verification event supports it.
 - `suspected_fraud`: the message shows risk indicators but is not verified (all synthetic records).
 - `unassessed`: evidence is missing or inadequate. This is not a finding of legitimacy.
+- `not_scam`: a reviewer judged the message legitimate (for example, an operator promotion that asks for nothing). Leave `taxonomy_id` empty.
 
 Never copy a fraud status from a source spreadsheet without supporting evidence (RULE-002).
