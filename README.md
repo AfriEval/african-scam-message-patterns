@@ -79,6 +79,21 @@ Version 0.1 is a draft. All records are `pending_review`.
 
 See [CHANGELOG.md](CHANGELOG.md) for changes.
 
+## Authors
+
+Tosin Amuda and Chanice Wanjiku Irungu, [AfriEval](https://afrieval.com).
+
+## Citation
+
+```bibtex
+@misc{amuda2026afriscam,
+  title        = {AfriScam: A Dataset of Scam and Fraud Messages from Kenya and Nigeria},
+  author       = {Amuda, Tosin and Irungu, Chanice Wanjiku},
+  year         = {2026},
+  howpublished = {\url{https://huggingface.co/datasets/Afrieval/african-scam-message-patterns}}
+}
+```
+
 ## License
 
 See [LICENSE](LICENSE).
