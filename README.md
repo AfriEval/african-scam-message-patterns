@@ -3,7 +3,7 @@ license: cc-by-4.0
 language:
 - en
 - sw
-pretty_name: African Scam Message Patterns
+pretty_name: AfriScam
 task_categories:
 - text-classification
 configs:
@@ -11,7 +11,9 @@ configs:
   data_files: data/afriscam-v0.1.jsonl
 ---
 
-# African Scam Message Patterns
+# AfriScam
+
+A Dataset of Scam and Fraud Messages from Kenya and Nigeria.
 
 A dataset of scam and fraud messages from African countries, labelled with a shared taxonomy of scam types, persuasion tactics, claimed identities, requested actions and verification status. It supports research, evaluation of scam-detection models, and public awareness work. Work in progress.
 
@@ -52,7 +54,7 @@ Load the dataset from Hugging Face:
 ```python
 from datasets import load_dataset
 
-ds = load_dataset("Afrieval/african-scam-message-patterns", split="train")
+ds = load_dataset("Afrieval/AfriScam", split="train")
 df = ds.to_pandas()
 
 real = df[df.record_origin == "real_world"]
@@ -81,7 +83,7 @@ See [CHANGELOG.md](CHANGELOG.md) for changes.
 
 ## Authors
 
-Tosin Amuda and Chanice Wanjiku Irungu, [AfriEval](https://afrieval.com).
+Tosin Amuda, Chanice Wanjiku Irungu
 
 ## Citation
 
@@ -90,7 +92,7 @@ Tosin Amuda and Chanice Wanjiku Irungu, [AfriEval](https://afrieval.com).
   title        = {AfriScam: A Dataset of Scam and Fraud Messages from Kenya and Nigeria},
   author       = {Amuda, Tosin and Irungu, Chanice Wanjiku},
   year         = {2026},
-  howpublished = {\url{https://huggingface.co/datasets/Afrieval/african-scam-message-patterns}}
+  howpublished = {\url{https://huggingface.co/datasets/Afrieval/AfriScam}}
 }
 ```
 
