@@ -18,7 +18,7 @@ Applies to every country file in `data/` (e.g. `data/kenya/af-scam-ke-v0.1.csv`)
 | `tactics` | list | Persuasion tactics used | `tactic` codes from `taxonomy/tactics.csv`, e.g. `["authority_claim", "urgency_pressure"]` |
 | `requested_action` | list | What the recipient is asked to do | Values from: `Open link`, `Pay fee`, `Pay deposit`, `Pay to account`, `Send money`, `Submit information`, `Submit documents`, `Call number`, `Share code`, `Invest`, `Attend in person`, `Dial USSD code`, `Reply to message`, `Reply by email`, `Release goods`, `Activate service`, `Vote`, `None stated` |
 | `risk_indicators` | list | Observable red flags in the message | Free text items |
-| `fraud_status` | enum | Fraud determination | `suspected_fraud`, `verified_fraudulent_request`, `unassessed` |
+| `fraud_status` | enum | Fraud determination | `suspected_fraud`, `verified_fraudulent_request`, `unassessed`, `not_scam` |
 | `verification_status` | enum | State of verification | `not_applicable` (synthetic), `completed_reported`, `not_documented` |
 | `review_status` | enum | Editorial review state | `pending_review`, `reviewed` |
 | `review_notes` | text | Reviewer comments | Free text |
@@ -28,4 +28,5 @@ Applies to every country file in `data/` (e.g. `data/kenya/af-scam-ke-v0.1.csv`)
 
 - `category`, `scam_type` and `subtype` always match the row for `taxonomy_id` in `taxonomy/scam_taxonomy.csv`. In the source workbook they are formulas; enter only `taxonomy_id`.
 - `unassessed` means evidence is missing or inadequate. It does not mean the message is legitimate.
+- `not_scam` marks a reviewed message judged legitimate. It is kept as a negative example and has no `taxonomy_id`.
 - Synthetic records always have `verification_status = not_applicable`.
