@@ -47,17 +47,27 @@ Real-world records may have a `screenshot_file` pointing to the original screens
 
 ## Quick start
 
+Load the dataset from Hugging Face:
+
 ```python
-import json
-import pandas as pd
+from datasets import load_dataset
 
-ke = pd.read_csv("data/kenya/af-scam-ke-v0.1.csv")
-for col in ["tactics", "requested_action", "risk_indicators", "language_tags"]:
-    ke[col] = ke[col].apply(lambda v: json.loads(v) if isinstance(v, str) else [])
+ds = load_dataset("Afrieval/african-scam-message-patterns", split="train")
+df = ds.to_pandas()
 
-real = ke[ke.record_origin == "real_world"]
+real = df[df.record_origin == "real_world"]
 print(real.explode("tactics").tactics.value_counts())
 ```
+
+Or read the file from a clone of this repository:
+
+```python
+import pandas as pd
+
+df = pd.read_json("data/afriscam-v0.1.jsonl", lines=True)
+```
+
+`tactics`, `requested_action`, `risk_indicators` and `language_tags` load as lists.
 
 ## Status
 
